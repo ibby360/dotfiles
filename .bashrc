@@ -2,6 +2,18 @@
 # ~/.bashrc
 #
 
+# Emoji prompt
+# function success_indicator() {
+#     if [ $? -eq 0 ] ; then
+#         echo "😎"
+#     else
+#         echo "💩"
+#     fi
+# }
+# export PS1='\[\033[1;31m\]\u@\h:\W\$ \[\033[37m\]$(success_indicator)'
+
+###########################
+
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
@@ -24,7 +36,6 @@ export PATH="/home/ibby/.local/bin:$PATH"
 if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
-
 
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
@@ -63,6 +74,25 @@ export PATH="/home/ibby/.local/bin:$PATH"
 ##############################################
 
 export SPOTIPY_CLIENT_ID='4d523c31fee14c5eb7f3fb283ee0d79e'
-export SPOTIPY_CLIENT_ID='ebeffa3252244131a467f209540d1dde'
+export SPOTIPY_CLIENT_SECRET='ebeffa3252244131a467f209540d1dde'
 
 alias config='/usr/bin/git --git-dir=/home/ibby/dotfiles/ --work-tree=/home/ibby'
+
+export PATH="$PATH:$HOME/.npm/bin"
+
+
+# Android
+export ANDROID_SDK_ROOT='/opt/android-sdk'
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin/
+export PATH=$PATH:$ANDROID_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
+PATH=$ANDROID_SDK_ROOT/emulator:$PATH
+
+
+# Java
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
+export PATH=$JAVA_HOME/bin:$PATH
+
+#export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
+
