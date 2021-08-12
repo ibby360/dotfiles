@@ -96,3 +96,4 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 #export JAVA_OPTS='-XX:+IgnoreUnrecognizedVMOptions --add-modules java.se.ee'
 
+eval "$(starship init bash)"
